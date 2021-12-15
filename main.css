@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gemunu Libre', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: '';
+  display: block;
+  background-image: url("./img.jpg");
+  background-size: cover;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  filter: brightness(50%);
+  padding: 5rem;
+  box-sizing: border-box;
+  z-index: -2;
+}
+
+body::after {
+  content: '';
+  display: block;
+  width: 65%;
+  height: 70%;
+  position: absolute;
+  border: 2px solid rgba(240, 255, 255, 0.5);
+  z-index: -3;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.greeting {
+  font-weight: 200;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  z-index: 1;
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+button.item {
+  /* background-color: inherit; */
+  color: inherit;
+  font-family: inherit;
+}
+
+.item {
+  border: none;
+  padding: 2rem 8rem;
+  margin: 1rem;
+  font-size: 3rem;
+  transition: all .4s ease;
+  cursor: pointer;
+  background-color: #5662E900;
+  position: relative;
+  overflow: hidden;
+  font-weight: 200;
+}
+
+.item:hover {
+  border-radius: 20px;
+}
+
+.icon {
+  position: absolute;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(237deg) brightness(100%) contrast(50%);
+  height: 80%;
+  width: 80%;
+  top: 0;
+  left: -4rem;
+  z-index: 2;
+  transform: rotate(-25deg) scale(2);
+  opacity: 0;
+  transition: all .35s ease;
+}
+
+.item_text {
+  position: relative;
+  z-index: 3;
+}
+
+/* discord */
+.discord_hover {
+  background-color: #5662E950;
+}
+
+.discord_hover > .icon {
+  opacity: 1;
+}
+
+/* youtube */
+.youtube_hover {
+  background-color: #FF000050;
+}
+
+.youtube_hover > .icon {
+  opacity: 1;
+}
+
+/* 4chan */
+.chan_hover {
+  background-color: #66CC3350;
+}
+
+.chan_hover > .icon {
+  opacity: 1;
+}
+
+/* Bottom quote */
+#quote {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 2rem;
+  font-family: "BodoniXT";
+  font-weight: 200;
+  opacity: 0.05;
+  /* width: 20rem; */
+}
